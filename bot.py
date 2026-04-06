@@ -7,17 +7,16 @@ from telegram.ext import (
     filters,
 )
 from openai import OpenAI
-
+import os
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 # =========================
 # TOKENS
 # =========================
 TELEGRAM_TOKEN = "8631074846:AAFOPzmmS9Ryu7-lVmTzZptvbkYEQUU-7b8"
-OPENAI_API_KEY = "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"
-
 # =========================
 # OPENAI CLIENT
 # =========================
-client = OpenAI(api_key=OPENAI_API_KEY)
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 # =========================
 # SYSTEM PROMPT
