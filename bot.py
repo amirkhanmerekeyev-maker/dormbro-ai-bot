@@ -245,7 +245,3 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     print("DormBro AI bot is running...")
     app.run_polling()
-
-
-if __name__ == "__main__":
-    main()
