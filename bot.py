@@ -236,19 +236,6 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
         await update.message.reply_text(error_text)
 
-
-# =========================
-# MAIN FUNCTION
-# =========================
-def main():
-    if TELEGRAM_TOKEN == "PASTE_YOUR_TELEGRAM_TOKEN_HERE":
-        print("Error: please insert your Telegram token.")
-        return
-
-    if OPENAI_API_KEY == "PASTE_YOUR_OPENAI_API_KEY_HERE":
-        print("Error: please insert your OpenAI API key.")
-        return
-
     app = ApplicationBuilder().token(TELEGRAM_TOKEN).build()
 
     app.add_handler(CommandHandler("start", start))
