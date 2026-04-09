@@ -242,3 +242,18 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     print("DormBro AI bot is running...")
     app.run_polling()
+    
+print("BEFORE APP BUILD")
+
+app = ApplicationBuilder().token(TELEGRAM_TOKEN).build()
+
+print("AFTER APP BUILD")
+
+app.add_handler(CommandHandler("start", start))
+app.add_handler(CommandHandler("help", help_command))
+app.add_handler(CommandHandler("clear", clear_command))
+app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
+
+print("BEFORE POLLING")
+app.run_polling()
+print("AFTER POLLING")
