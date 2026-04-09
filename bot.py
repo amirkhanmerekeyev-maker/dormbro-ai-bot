@@ -1,6 +1,9 @@
+import os
+
 print("STARTED BOT FILE")
 print("BOT_TOKEN exists:", bool(os.getenv("BOT_TOKEN")))
 print("OPENAI_API_KEY exists:", bool(os.getenv("OPENAI_API_KEY")))
+
 from telegram import Update
 from telegram.ext import (
     ApplicationBuilder,
