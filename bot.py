@@ -9,18 +9,9 @@ from telegram.ext import (
 from openai import OpenAI
 import os
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-# =========================
-# TOKENS
-# =========================
-TELEGRAM_TOKEN = "8631074846:AAFOPzmmS9Ryu7-lVmTzZptvbkYEQUU-7b8"
-# =========================
-# OPENAI CLIENT
-# =========================
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-# =========================
-# SYSTEM PROMPT
-# =========================
+TELEGRAM_TOKEN = os.getenv("BOT_TOKEN")
+
 SYSTEM_PROMPT = """
 You are DormBro AI Assistant.
 
